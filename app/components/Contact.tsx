@@ -48,12 +48,12 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Get In Touch
+            Let's Work Together
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full mb-6" />
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Have a project in mind or just want to say hi? Feel free to reach out. 
-            I'm always open to discussing new projects and opportunities.
+            Ready to bring your next project to life? Team Sparrow is here to help. 
+            Let's collaborate and create something amazing together.
           </p>
         </motion.div>
 
@@ -65,12 +65,12 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
-              Let's Connect
+              Connect With Team Sparrow
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-8">
-              I'm currently available for freelance work and new opportunities. 
-              If you have a project that you want to get started, think you need my help 
-              with something, or just fancy saying hey, then get in touch.
+              We're always excited to take on new challenges and collaborate on innovative projects. 
+              Whether you need full-stack development, mobile apps, AI solutions, or creative design, 
+              our diverse team has the expertise to bring your vision to life.
             </p>
 
             <div className="space-y-6">
@@ -85,10 +85,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email</h4>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:hello@teamsparrow.com"
                     className="text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
                   >
-                    your.email@example.com
+                    hello@teamsparrow.com
                   </a>
                 </div>
               </motion.div>
@@ -104,10 +104,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+1555SPARROW"
                     className="text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
                   >
-                    +1 (234) 567-890
+                    +1 (555) SPARROW
                   </a>
                 </div>
               </motion.div>
@@ -123,7 +123,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Location</h4>
                   <p className="text-slate-600 dark:text-slate-300">
-                    San Francisco, CA<br />United States
+                    Remote Team<br />Available Worldwide
                   </p>
                 </div>
               </motion.div>

@@ -12,10 +12,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-              Your Name
+              Team Sparrow
             </h3>
             <p className="text-slate-400">
-              Full-stack developer passionate about creating beautiful and functional web experiences.
+              Five passionate developers and designers creating innovative digital solutions together.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex gap-4">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/team-sparrow"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -58,7 +58,7 @@ export default function Footer() {
                 <Github size={20} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/team-sparrow"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -67,7 +67,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://twitter.com/teamsparrow"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -76,7 +76,7 @@ export default function Footer() {
                 <Twitter size={20} />
               </motion.a>
               <motion.a
-                href="mailto:your.email@example.com"
+                href="mailto:hello@teamsparrow.com"
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="bg-white/10 p-3 rounded-lg hover:bg-white/20 transition-colors"
               >
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8">
           <p className="text-center text-slate-400 flex items-center justify-center gap-2">
-            © {currentYear} Your Name. Made with <Heart size={16} className="text-red-500" /> using Next.js & Tailwind CSS
+            © {currentYear} Team Sparrow. Made with <Heart size={16} className="text-red-500" /> using Next.js & Tailwind CSS
           </p>
         </div>
       </div>

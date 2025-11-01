@@ -8,69 +8,81 @@ import { ExternalLink, Github, X } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management',
-    longDescription: 'Built a comprehensive e-commerce platform featuring real-time inventory tracking, secure payment processing with Stripe, and an admin dashboard for managing products and orders. Implemented advanced search functionality and personalized recommendations.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe'],
-    gradient: 'from-blue-600 to-cyan-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Digital Wardrobe',
+    description: 'Smart clothing management and outfit planning application',
+    longDescription: 'A comprehensive digital wardrobe application that helps users organize their clothing, plan outfits, and make smart fashion decisions. Usman led the development with modern web technologies, creating an intuitive interface for wardrobe management and outfit coordination.',
+    image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=600&fit=crop',
+    tags: ['React', 'JavaScript', 'CSS', 'Node.js', 'Database'],
+    gradient: 'from-purple-600 to-pink-600',
+    github: 'https://github.com/UsmanRasool7/Digital-Wardrobe',
+    demo: 'https://digital-wardrobe-demo.com',
+    teamLead: 'Usman Rasool',
+    contributors: ['Rohaan Khurram', 'Ramis Ahmed', 'Taha Hassan']
   },
   {
     id: 2,
-    title: 'AI Task Manager',
-    description: 'Intelligent task management app with AI-powered prioritization',
-    longDescription: 'Developed an innovative task management application that uses machine learning to automatically prioritize tasks based on deadlines, importance, and user behavior patterns. Features include collaborative workspaces, real-time updates, and smart notifications.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
-    tags: ['React', 'Python', 'TensorFlow', 'Firebase'],
-    gradient: 'from-purple-600 to-pink-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'PrepMaster Test Platform',
+    description: 'Advanced test-taking web application for educational assessments',
+    longDescription: 'A comprehensive test-taking platform built with industry standards using Django-Rest framework and React.js. Rohaan led the development, implementing secure test delivery, real-time scoring, and detailed analytics. The platform supports multiple question types and provides detailed performance insights.',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop',
+    tags: ['Django', 'React.js', 'Python', 'SQLite', 'REST API'],
+    gradient: 'from-blue-600 to-cyan-600',
+    github: 'https://github.com/team-sparrow/prepmaster',
+    demo: 'https://prepmaster-demo.com',
+    teamLead: 'Rohaan Khurram',
+    contributors: ['Ramis Ahmed', 'Usman Rasool', 'Taha Hassan']
   },
   {
     id: 3,
-    title: 'Social Media Dashboard',
-    description: 'Analytics dashboard for managing multiple social media accounts',
-    longDescription: 'Created a comprehensive social media management tool that aggregates data from multiple platforms, provides detailed analytics, and enables scheduled posting. Includes sentiment analysis and engagement tracking across all major social networks.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    tags: ['Vue.js', 'Node.js', 'MongoDB', 'Chart.js'],
-    gradient: 'from-green-600 to-emerald-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Draw-Dash Mobile Game',
+    description: 'Award-winning mobile game developed with Unity',
+    longDescription: 'An innovative mobile game that competed against 100+ participants and achieved recognition in a major competition. Rohaan led the game development using Unity Game Engine, implementing creative gameplay mechanics, smooth animations, and engaging user experience that showcased advanced algorithmic thinking.',
+    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop',
+    tags: ['Unity', 'C#', 'Mobile Gaming', 'Game Design', 'Algorithm'],
+    gradient: 'from-orange-600 to-red-600',
+    teamLead: 'Rohaan Khurram',
+    contributors: ['Team Member 5', 'Ramis Ahmed', 'Taha Hassan'],
+    github: 'https://github.com/team-sparrow/draw-dash',
+    demo: 'https://draw-dash-demo.com',
   },
   {
     id: 4,
-    title: 'Fitness Tracking App',
-    description: 'Mobile-first fitness app with workout plans and progress tracking',
-    longDescription: 'Designed and developed a comprehensive fitness application featuring personalized workout plans, nutrition tracking, progress visualization, and social challenges. Integrated with wearable devices for automatic activity tracking.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
-    tags: ['React Native', 'Express', 'PostgreSQL', 'AWS'],
-    gradient: 'from-orange-600 to-red-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Ticket Booking System',
+    description: 'Full-stack bus and room booking platform',
+    longDescription: 'A comprehensive booking system for buses and accommodations built with modern web technologies. The team collaborated to implement efficient booking algorithms, real-time availability tracking, and secure payment processing. Features include user authentication, booking management, and administrative controls.',
+    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+    gradient: 'from-green-600 to-emerald-600',
+    github: 'https://github.com/team-sparrow/ticket-booking',
+    demo: 'https://ticket-booking-demo.com',
+    teamLead: 'Ramis Ahmed',
+    contributors: ['Rohaan Khurram', 'Usman Rasool', 'Taha Hassan']
   },
   {
     id: 5,
-    title: 'Real Estate Platform',
-    description: 'Modern property listing platform with virtual tours',
-    longDescription: 'Built a sophisticated real estate platform featuring 3D virtual tours, advanced property search with filters, mortgage calculators, and integrated scheduling for property viewings. Includes an admin panel for agents to manage listings.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
-    tags: ['Next.js', 'Three.js', 'Prisma', 'Tailwind'],
-    gradient: 'from-indigo-600 to-blue-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'Weather Dashboard App',
+    description: 'Real-time weather information web application',
+    longDescription: 'A responsive weather application providing real-time weather data through API integration. Features include current conditions, forecasts, location-based weather, and an intuitive user interface. The app demonstrates proficiency in API consumption, data visualization, and responsive design principles.',
+    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop',
+    tags: ['JavaScript', 'Weather API', 'HTML', 'CSS', 'Responsive Design'],
+    gradient: 'from-yellow-600 to-orange-600',
+    github: 'https://github.com/team-sparrow/weather-app',
+    demo: 'https://weather-app-demo.com',
+    teamLead: 'Usman Rasool',
+    contributors: ['Rohaan Khurram', 'Taha Hassan', 'Team Member 5']
   },
   {
     id: 6,
-    title: 'Weather Forecast App',
-    description: 'Beautiful weather app with detailed forecasts and alerts',
-    longDescription: 'Created an elegant weather application with real-time data, detailed 14-day forecasts, severe weather alerts, and interactive weather maps. Features location-based recommendations and weather-based activity suggestions.',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop',
-    tags: ['React', 'OpenWeather API', 'Mapbox', 'Redux'],
-    gradient: 'from-yellow-600 to-orange-600',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    title: 'UNIX Terminal Emulator',
+    description: 'Custom UNIX-based terminal built from scratch',
+    longDescription: 'A fully functional UNIX-based terminal implementation showcasing deep understanding of operating system concepts. Rohaan developed this project to demonstrate expertise in system-level programming, memory management, and process handling. The terminal supports various UNIX commands and system calls.',
+    image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=600&fit=crop',
+    tags: ['C', 'Operating Systems', 'UNIX', 'System Programming', 'Memory Management'],
+    gradient: 'from-indigo-600 to-purple-600',
+    github: 'https://github.com/team-sparrow/unix-terminal',
+    demo: 'https://unix-terminal-demo.com',
+    teamLead: 'Rohaan Khurram',
+    contributors: ['Ramis Ahmed', 'Taha Hassan', 'Team Member 5']
   },
 ];
 
@@ -89,7 +101,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Featured Projects
+            Our Collaborative Projects
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full" />
         </motion.div>
@@ -124,7 +136,7 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-3">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -133,6 +145,15 @@ export default function Projects() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="mb-4">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">
+                    <span className="font-medium">Team Lead:</span> {project.teamLead}
+                  </p>
+                  <p className="text-xs text-slate-400 dark:text-slate-500">
+                    Contributors: {project.contributors.join(', ')}
+                  </p>
                 </div>
 
                 <div className="flex gap-4">
@@ -207,7 +228,7 @@ export default function Projects() {
                 {selectedProject.longDescription}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {selectedProject.tags.map((tag) => (
                   <span
                     key={tag}
@@ -216,6 +237,16 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              <div className="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-4 mb-6">
+                <h4 className="font-semibold text-slate-900 dark:text-white mb-2">Team Collaboration</h4>
+                <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                  <span className="font-medium">Project Lead:</span> {selectedProject.teamLead}
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">
+                  <span className="font-medium">Team Members:</span> {selectedProject.contributors.join(', ')}
+                </p>
               </div>
 
               <div className="flex gap-4">
