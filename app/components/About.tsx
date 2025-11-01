@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Award, Users, Code, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 const teamMembers = [
@@ -16,7 +16,7 @@ const teamMembers = [
     skills: ['React Native', 'Unity', 'Python', 'C++', 'Django'],
     github: 'https://github.com/RohaanAwan99',
     linkedin: 'https://www.linkedin.com/in/rohaan-khurram-4bb498275/',
-    email: 'rohaankhurram99@gmail.com',
+
     bio: 'Game development champion with expertise in mobile apps and competitive programming. Won multiple hackathons including M-Labs Game Jam.',
     phone: '0333 8762669',
     specialization: 'Mobile & Gaming'
@@ -24,15 +24,16 @@ const teamMembers = [
   {
     id: 2,
     name: 'Usman Rasool',
-    role: 'Full-Stack Developer',
+    role: 'Full-Stack Developer & Game Development Lead',
     avatar: '/pics/usman.jpg',
     gradient: 'from-green-500 to-emerald-500',
-    skills: ['React', 'Next.js', 'Node.js', 'MongoDB', 'JavaScript'],
+    skills: ['MERN Stack', 'Flutter', 'Django', 'C++', 'Game Development'],
     github: 'https://github.com/UsmanRasool7',
     linkedin: 'https://www.linkedin.com/in/usman-rasool-75201a2b9/',
-    email: 'usman@teamsparrow.com',
-    bio: 'Full-stack engineer passionate about creating seamless user experiences with modern web technologies and scalable architectures.',
-    specialization: 'Full-Stack Development'
+
+    bio: 'Game Jam winner and full-stack developer with expertise in web platforms and mobile game development. Led winning team in national competition.',
+    specialization: 'Full-Stack & Game Dev',
+    phone: '+92 3067776036'
   },
   {
     id: 3,
@@ -43,7 +44,7 @@ const teamMembers = [
     skills: ['Project Management', 'React', 'Node.js', 'Leadership', 'Agile'],
     github: 'https://github.com/Ramis102',
     linkedin: 'http://www.linkedin.com/in/ramis-humayun-66794626b',
-    email: 'ramis@teamsparrow.com',
+
     bio: 'Team leader and project orchestrator ensuring efficient workflow and successful project delivery through strategic planning.',
     specialization: 'Leadership & Management'
   },
@@ -56,7 +57,7 @@ const teamMembers = [
     skills: ['React', 'JavaScript', 'CSS', 'UI/UX', 'HTML'],
     github: 'https://github.com/tahamudassar',
     linkedin: 'https://www.linkedin.com/in/taha-mudassar',
-    email: 'taha@teamsparrow.com',
+
     bio: 'Frontend specialist creating beautiful and responsive interfaces with attention to detail and user-centered design principles.',
     specialization: 'Frontend & Design'
   },
@@ -69,7 +70,7 @@ const teamMembers = [
     skills: ['Python', 'Data Analysis', 'Backend', 'Testing', 'Algorithms'],
     github: 'https://github.com/abu-bakar',
     linkedin: 'https://linkedin.com/in/abu-bakar',
-    email: 'abubakar@teamsparrow.com',
+
     bio: 'Backend developer and data analyst ensuring robust system architecture and data-driven decision making for optimal performance.',
     specialization: 'Backend & Analytics'
   }
@@ -79,174 +80,232 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+
   return (
-    <section id="about" className="py-20 md:py-32 bg-slate-50 dark:bg-slate-900" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative py-32 bg-gradient-to-b from-gray-950 via-slate-900 to-gray-950 overflow-hidden" ref={ref}>
+      {/* Elegant Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Sophisticated Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Meet Team Sparrow
-          </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full mb-6" />
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            We are five passionate developers and designers united by our commitment to creating 
-            innovative solutions and pushing the boundaries of digital experiences.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8"
+          >
+            <Users className="w-5 h-5 text-blue-400" />
+            <span className="text-white/80 font-medium">Our Team</span>
+          </motion.div>
 
-        {/* Team Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
-        >
-          {[
-            { number: "5", label: "Team Members", color: "purple", gradient: "from-emerald-500 to-purple-700" },
-            { number: "8+", label: "Combined Years", color: "pink", gradient: "from-green-500 to-pink-700" },
-            { number: "15+", label: "Projects Built", color: "blue", gradient: "from-blue-500 to-blue-700" },
-            { number: "100%", label: "Dedication", color: "green", gradient: "from-green-500 to-green-700" }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.5, rotateY: -90 }}
-              animate={isInView ? { opacity: 1, scale: 1, rotateY: 0 } : { opacity: 0, scale: 0.5, rotateY: -90 }}
-              transition={{ 
-                duration: 0.6, 
-                delay: 0.3 + index * 0.1,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.05,
-                y: -5,
-                transition: { duration: 0.2 }
-              }}
-              className="relative text-center bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/20 dark:border-slate-700/50 group overflow-hidden"
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="block"
             >
-              {/* Animated Background */}
-              <motion.div 
-                className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-              />
-              
-              {/* Floating Particles */}
-              <motion.div
-                className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-emerald-400/30 to-green-400/30 rounded-full blur-sm"
-                animate={{
-                  x: [0, 10, 0],
-                  y: [0, -10, 0],
-                  scale: [1, 1.2, 1]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  delay: index * 0.5
-                }}
-              />
-
-              <motion.div 
-                className={`text-5xl md:text-6xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-3`}
-                initial={{ scale: 0 }}
-                animate={isInView ? { scale: 1 } : { scale: 0 }}
-                transition={{ 
-                  delay: 0.5 + index * 0.1, 
-                  type: "spring", 
-                  stiffness: 200 
-                }}
-              >
-                {stat.number}
-              </motion.div>
-              <motion.div 
-                className="text-slate-600 dark:text-slate-300 font-medium"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.7 + index * 0.1 }}
-              >
-                {stat.label}
-              </motion.div>
-            </motion.div>
-          ))}
+              MEET
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="block bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
+            >
+              OUR TEAM
+            </motion.span>
+          </h2>          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+          >
+            Five passionate innovators united by a shared vision of digital excellence. 
+            Each bringing unique expertise to create extraordinary experiences.
+          </motion.p>
         </motion.div>
 
-        {/* Team Members Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+        {/* Animated Technology Carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-24"
+        >
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+          >
+            <h3 className="text-3xl font-bold text-white mb-4">Our Technology Stack</h3>
+            <p className="text-gray-400 text-lg">Cutting-edge technologies we master</p>
+          </motion.div>
+
+          <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 p-8">
+            <motion.div 
+              className="flex gap-8"
+              animate={{ x: [0, -2000] }}
+              transition={{ 
+                duration: 30, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {[
+                { name: "React", color: "from-blue-400 to-blue-600", icon: "⚛️" },
+                { name: "Next.js", color: "from-gray-400 to-gray-600", icon: "▲" },
+                { name: "TypeScript", color: "from-blue-500 to-blue-700", icon: "TS" },
+                { name: "Node.js", color: "from-green-400 to-green-600", icon: "🟢" },
+                { name: "Python", color: "from-yellow-400 to-blue-600", icon: "🐍" },
+                { name: "Java", color: "from-red-400 to-orange-600", icon: "☕" },
+                { name: "C++", color: "from-purple-400 to-purple-600", icon: "⚡" },
+                { name: "MongoDB", color: "from-green-500 to-green-700", icon: "🍃" },
+                { name: "PostgreSQL", color: "from-blue-600 to-indigo-600", icon: "🐘" },
+                { name: "Docker", color: "from-blue-400 to-cyan-600", icon: "🐋" },
+                { name: "AWS", color: "from-orange-400 to-yellow-500", icon: "☁️" },
+                { name: "Firebase", color: "from-yellow-500 to-orange-500", icon: "🔥" },
+                // Duplicate for seamless loop
+                { name: "React", color: "from-blue-400 to-blue-600", icon: "⚛️" },
+                { name: "Next.js", color: "from-gray-400 to-gray-600", icon: "▲" },
+                { name: "TypeScript", color: "from-blue-500 to-blue-700", icon: "TS" },
+                { name: "Node.js", color: "from-green-400 to-green-600", icon: "🟢" },
+                { name: "Python", color: "from-yellow-400 to-blue-600", icon: "🐍" },
+                { name: "Java", color: "from-red-400 to-orange-600", icon: "☕" },
+                { name: "C++", color: "from-purple-400 to-purple-600", icon: "⚡" },
+                { name: "MongoDB", color: "from-green-500 to-green-700", icon: "🍃" },
+                { name: "PostgreSQL", color: "from-blue-600 to-indigo-600", icon: "🐘" },
+                { name: "Docker", color: "from-blue-400 to-cyan-600", icon: "🐋" },
+                { name: "AWS", color: "from-orange-400 to-yellow-500", icon: "☁️" },
+                { name: "Firebase", color: "from-yellow-500 to-orange-500", icon: "🔥" },
+              ].map((tech, index) => (
+                <motion.div
+                  key={`${tech.name}-${index}`}
+                  className="flex-shrink-0 relative"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className={`w-32 h-20 rounded-2xl bg-gradient-to-br ${tech.color} p-0.5`}>
+                    <div className="w-full h-full bg-gray-900/80 rounded-2xl flex flex-col items-center justify-center backdrop-blur-sm">
+                      <span className="text-2xl mb-1">{tech.icon}</span>
+                      <span className="text-white font-semibold text-sm">{tech.name}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Glow effect */}
+                  <motion.div
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tech.color} opacity-0 blur-xl`}
+                    animate={{ 
+                      opacity: [0, 0.3, 0],
+                      scale: [0.8, 1.2, 0.8]
+                    }}
+                    transition={{ 
+                      duration: 3, 
+                      repeat: Infinity,
+                      delay: index * 0.2
+                    }}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Redesigned Team Members Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.id}
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
+              initial={{ opacity: 0, y: 60, rotateY: -30 }}
+              animate={isInView ? { opacity: 1, y: 0, rotateY: 0 } : { opacity: 0, y: 60, rotateY: -30 }}
               transition={{ 
-                duration: 0.6, 
-                delay: 0.1 * index,
+                duration: 0.8, 
+                delay: 0.2 + index * 0.15,
                 type: "spring",
-                stiffness: 100 
+                stiffness: 80 
               }}
               whileHover={{ 
-                y: -10,
-                scale: 1.02,
-                transition: { duration: 0.3 }
+                y: -4,
+                transition: { duration: 0.2, ease: "easeOut" }
               }}
-              className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl border border-white/20 dark:border-slate-700/50 group overflow-hidden"
+              className="group relative cursor-pointer"
             >
-              {/* Animated Background Gradient */}
-              <motion.div 
-                className={`absolute inset-0 bg-gradient-to-br ${member.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                initial={false}
-              />
-              
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-emerald-400/20 to-green-400/20 rounded-full blur-xl"
-                animate={{
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 180, 360]
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
+              {/* Card Container */}
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:shadow-3xl overflow-hidden transition-all duration-300">
+                {/* Subtle Border Glow */}
+                <div
+                  className="absolute -inset-0.5 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"
+                  style={{
+                    background: `linear-gradient(135deg, ${member.gradient.includes('emerald') ? '#10b981' : member.gradient.includes('blue') ? '#3b82f6' : member.gradient.includes('purple') ? '#8b5cf6' : '#22c55e'}, transparent)`
+                  }}
+                />
+                
+                {/* Floating Particles */}
+                <motion.div
+                  className="absolute top-4 right-4 w-2 h-2 bg-blue-400/60 rounded-full"
+                  animate={{
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: index * 0.5
+                  }}
+                />
 
-              {/* Avatar with Enhanced Animation */}
-              <div className="relative mb-6">
-                <motion.div 
-                  className="relative w-24 h-24 mx-auto"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {/* Animated Border Ring */}
+                {/* Profile Section with 3D Effect */}
+                <div className="relative mb-6">
                   <motion.div 
-                    className={`absolute -inset-2 bg-gradient-to-br ${member.gradient} rounded-full opacity-75 blur-sm`}
-                    animate={{
-                      rotate: [0, 360],
-                      scale: [1, 1.05, 1]
+                    className="relative w-32 h-32 mx-auto"
+                    whileHover={{ 
+                      rotateY: 10,
+                      rotateX: 10,
+                      scale: 1.05 
                     }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "linear"
-                    }}
-                  />
-                  
-                  {/* Profile Image */}
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-lg">
-                    <Image 
-                      src={member.avatar} 
-                      alt={member.name}
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                    style={{ transformStyle: 'preserve-3d' }}
+                  >
+                    {/* Glowing Ring */}
+                    <motion.div 
+                      className={`absolute -inset-3 rounded-full opacity-60`}
+                      style={{
+                        background: `conic-gradient(from 0deg, transparent, ${member.gradient.split(' ')[1]}, transparent)`
+                      }}
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                     />
-                    {/* Overlay on hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
-                  </div>
+                    
+                    {/* Image Container */}
+                    <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Image 
+                          src={member.avatar} 
+                          alt={member.name}
+                          width={128}
+                          height={128}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+                      
+                      {/* Hover Overlay */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                    </div>
 
-                  {/* Specialization Badge */}
+                    {/* Role Badge */}
                   <motion.div 
                     className="absolute -bottom-2 left-1/2 transform -translate-x-1/2"
                     initial={{ scale: 0 }}
@@ -268,7 +327,7 @@ export default function About() {
                 transition={{ delay: 0.4 + index * 0.1 }}
               >
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-emerald-600 group-hover:to-green-600 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 transition-colors duration-300">
                     {member.name}
                   </h3>
                   <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-2">
@@ -317,7 +376,8 @@ export default function About() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200 rounded-full hover:bg-gray-700/50 backdrop-blur-sm"
                   >
                     <Github size={16} />
                   </motion.a>
@@ -327,20 +387,14 @@ export default function About() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-2 text-slate-400 hover:text-blue-600 transition-colors duration-200 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-2 text-gray-400 hover:text-blue-400 transition-colors duration-200 rounded-full hover:bg-blue-500/20 backdrop-blur-sm"
                   >
                     <Linkedin size={16} />
                   </motion.a>
-                  <motion.a
-                    href={`mailto:${member.email}`}
-                    whileHover={{ scale: 1.2, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 text-slate-400 hover:text-emerald-600 transition-colors duration-200 rounded-full hover:bg-purple-50 dark:hover:bg-purple-900/30"
-                  >
-                    <Mail size={16} />
-                  </motion.a>
                 </motion.div>
               </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>
