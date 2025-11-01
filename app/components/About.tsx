@@ -62,7 +62,7 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: 'Yaddu Bakar',
+    name: 'Abu Bakar',
     role: 'Backend Developer & Analyst',
     avatar: '/pics/Abubakar.jpeg',
     gradient: 'from-indigo-500 to-emerald-500',
