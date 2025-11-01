@@ -58,7 +58,7 @@ const skills = [
     category: 'Data & Analytics',
     icon: Globe,
     color: 'from-teal-600 to-emerald-600',
-    specialist: 'Rohaan & Team Member 5',
+    specialist: 'Rohaan & Abu bakar',
     items: [
       { name: 'Data Mining & Analysis', level: 85 },
       { name: 'R Programming', level: 78 },
