@@ -5,12 +5,12 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Main floating orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/40 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/40 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.4, 0.7, 0.4],
@@ -24,7 +24,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/40 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-500/40 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.7, 0.4],
@@ -76,7 +76,7 @@ export default function Hero() {
         ))}
 
         {/* Gradient mesh overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-indigo-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-green-900/20" />
       </div>
 
       {/* Content */}
@@ -93,7 +93,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             We Are{' '}
-            <span className="bg-linear-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+            <span className="bg-linear-to-r from-emerald-400 to-green-600 text-transparent bg-clip-text">
               Team Sparrow
             </span>
           </motion.h1>
@@ -119,7 +119,7 @@ export default function Hero() {
           >
             <a
               href="#about"
-              className="px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+              className="px-8 py-4 bg-linear-to-r from-emerald-600 to-green-600 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105"
             >
               Meet The Team
             </a>

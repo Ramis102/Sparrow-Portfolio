@@ -13,7 +13,7 @@ const projects = [
     longDescription: 'A comprehensive digital wardrobe application that helps users organize their clothing, plan outfits, and make smart fashion decisions. Usman led the development with modern web technologies, creating an intuitive interface for wardrobe management and outfit coordination.',
     image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&h=600&fit=crop',
     tags: ['React', 'JavaScript', 'CSS', 'Node.js', 'Database'],
-    gradient: 'from-purple-600 to-pink-600',
+    gradient: 'from-emerald-600 to-green-600',
     github: 'https://github.com/UsmanRasool7/Digital-Wardrobe',
     demo: 'https://digital-wardrobe-demo.com',
     teamLead: 'Usman Rasool',
@@ -78,7 +78,7 @@ const projects = [
     longDescription: 'A fully functional UNIX-based terminal implementation showcasing deep understanding of operating system concepts. Rohaan developed this project to demonstrate expertise in system-level programming, memory management, and process handling. The terminal supports various UNIX commands and system calls.',
     image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=600&fit=crop',
     tags: ['C', 'Operating Systems', 'UNIX', 'System Programming', 'Memory Management'],
-    gradient: 'from-indigo-600 to-purple-600',
+    gradient: 'from-teal-600 to-emerald-600',
     github: 'https://github.com/team-sparrow/unix-terminal',
     demo: 'https://unix-terminal-demo.com',
     teamLead: 'Rohaan Khurram',
@@ -103,7 +103,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Our Collaborative Projects
           </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -129,7 +129,7 @@ export default function Projects() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">
@@ -161,7 +161,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
+                    className="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <Github size={18} />
@@ -171,7 +171,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
+                    className="flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink size={18} />
@@ -180,7 +180,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-purple-600 rounded-2xl transition-colors duration-300 pointer-events-none" />
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-emerald-600 rounded-2xl transition-colors duration-300 pointer-events-none" />
             </motion.div>
           ))}
         </div>
@@ -263,7 +263,7 @@ export default function Projects() {
                   href={selectedProject.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:opacity-80 transition-opacity"
+                  className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-emerald-600 to-green-600 text-white rounded-full font-semibold hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink size={20} />
                   Live Demo
@@ -276,3 +276,4 @@ export default function Projects() {
     </section>
   );
 }
+

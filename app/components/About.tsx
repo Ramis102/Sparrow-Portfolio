@@ -12,7 +12,7 @@ const teamMembers = [
     name: 'Muhammad Rohaan Khurram',
     role: 'Mobile & Game Developer',
     avatar: '/pics/Rohaan.jpeg',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-emerald-500 to-green-500',
     skills: ['React Native', 'Unity', 'Python', 'C++', 'Django'],
     github: 'https://github.com/RohaanAwan99',
     linkedin: 'https://www.linkedin.com/in/rohaan-khurram-4bb498275/',
@@ -36,7 +36,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: 'Muhammad Ramis',
+    name: 'Ramis Humayun',
     role: 'Project Manager & Developer',
     avatar: '/pics/Ramis.jpeg',
     gradient: 'from-blue-500 to-cyan-500',
@@ -49,7 +49,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: 'Muhammad Taha',
+    name: 'Taha Mudassar',
     role: 'Frontend Developer',
     avatar: '/pics/Taha.jpeg',
     gradient: 'from-orange-500 to-red-500',
@@ -62,10 +62,10 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: 'Abu Bakar',
+    name: 'Yaddu Bakar',
     role: 'Backend Developer & Analyst',
     avatar: '/pics/Abubakar.jpeg',
-    gradient: 'from-indigo-500 to-purple-500',
+    gradient: 'from-indigo-500 to-emerald-500',
     skills: ['Python', 'Data Analysis', 'Backend', 'Testing', 'Algorithms'],
     github: 'https://github.com/abu-bakar',
     linkedin: 'https://linkedin.com/in/abu-bakar',
@@ -91,7 +91,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Meet Team Sparrow
           </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full mb-6" />
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             We are five passionate developers and designers united by our commitment to creating 
             innovative solutions and pushing the boundaries of digital experiences.
@@ -106,8 +106,8 @@ export default function About() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
           {[
-            { number: "5", label: "Team Members", color: "purple", gradient: "from-purple-500 to-purple-700" },
-            { number: "8+", label: "Combined Years", color: "pink", gradient: "from-pink-500 to-pink-700" },
+            { number: "5", label: "Team Members", color: "purple", gradient: "from-emerald-500 to-purple-700" },
+            { number: "8+", label: "Combined Years", color: "pink", gradient: "from-green-500 to-pink-700" },
             { number: "15+", label: "Projects Built", color: "blue", gradient: "from-blue-500 to-blue-700" },
             { number: "100%", label: "Dedication", color: "green", gradient: "from-green-500 to-green-700" }
           ].map((stat, index) => (
@@ -135,7 +135,7 @@ export default function About() {
               
               {/* Floating Particles */}
               <motion.div
-                className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-sm"
+                className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-emerald-400/30 to-green-400/30 rounded-full blur-sm"
                 animate={{
                   x: [0, 10, 0],
                   y: [0, -10, 0],
@@ -200,7 +200,7 @@ export default function About() {
               
               {/* Floating Elements */}
               <motion.div
-                className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
+                className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-emerald-400/20 to-green-400/20 rounded-full blur-xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 180, 360]
@@ -268,10 +268,10 @@ export default function About() {
                 transition={{ delay: 0.4 + index * 0.1 }}
               >
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-emerald-600 group-hover:to-green-600 group-hover:bg-clip-text transition-all duration-300">
                     {member.name}
                   </h3>
-                  <p className="text-sm font-medium text-purple-600 dark:text-purple-400 mb-2">
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-2">
                     {member.role}
                   </p>
                 </div>
@@ -335,7 +335,7 @@ export default function About() {
                     href={`mailto:${member.email}`}
                     whileHover={{ scale: 1.2, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-2 text-slate-400 hover:text-purple-600 transition-colors duration-200 rounded-full hover:bg-purple-50 dark:hover:bg-purple-900/30"
+                    className="p-2 text-slate-400 hover:text-emerald-600 transition-colors duration-200 rounded-full hover:bg-purple-50 dark:hover:bg-purple-900/30"
                   >
                     <Mail size={16} />
                   </motion.a>
@@ -348,3 +348,4 @@ export default function About() {
     </section>
   );
 }
+

@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 bg-linear-to-r from-emerald-400 to-green-600 text-transparent bg-clip-text">
               Team Sparrow
             </h3>
             <p className="text-slate-400">
@@ -95,3 +95,4 @@ export default function Footer() {
     </footer>
   );
 }
+

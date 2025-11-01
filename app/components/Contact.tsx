@@ -50,7 +50,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Let's Work Together
           </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full mb-6" />
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Ready to bring your next project to life? Team Sparrow is here to help. 
             Let's collaborate and create something amazing together.
@@ -79,14 +79,14 @@ export default function Contact() {
                 whileHover={{ x: 10 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="bg-linear-to-br from-purple-600 to-pink-600 p-3 rounded-xl">
+                <div className="bg-linear-to-br from-emerald-600 to-green-600 p-3 rounded-xl">
                   <Mail className="text-white" size={24} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email</h4>
                   <a
                     href="mailto:hello@teamsparrow.com"
-                    className="text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
+                    className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
                   >
                     hello@teamsparrow.com
                   </a>
@@ -105,7 +105,7 @@ export default function Contact() {
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
                   <a
                     href="tel:+1555SPARROW"
-                    className="text-slate-600 dark:text-slate-300 hover:text-purple-600 transition-colors"
+                    className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
                   >
                     +1 (555) SPARROW
                   </a>
@@ -148,7 +148,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-all"
                   placeholder="Your name"
                 />
               </div>
@@ -164,7 +164,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -180,7 +180,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-all"
                   placeholder="What's this about?"
                 />
               </div>
@@ -196,7 +196,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-600 focus:border-transparent transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-8 py-4 bg-linear-to-r from-emerald-600 to-green-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
@@ -247,3 +247,4 @@ export default function Contact() {
     </section>
   );
 }
+

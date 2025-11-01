@@ -33,7 +33,7 @@ const skills = [
   {
     category: 'Mobile & Game Development',
     icon: Smartphone,
-    color: 'from-purple-600 to-pink-600',
+    color: 'from-emerald-600 to-green-600',
     specialist: 'Rohaan',
     items: [
       { name: 'React Native', level: 92 },
@@ -57,7 +57,7 @@ const skills = [
   {
     category: 'Data & Analytics',
     icon: Globe,
-    color: 'from-indigo-600 to-purple-600',
+    color: 'from-teal-600 to-emerald-600',
     specialist: 'Rohaan & Team Member 5',
     items: [
       { name: 'Data Mining & Analysis', level: 85 },
@@ -96,7 +96,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Our Combined Expertise
           </h2>
-          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-pink-600 mx-auto rounded-full mb-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full mb-6" />
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Five specialists, one powerhouse team. Our diverse skill set allows us to handle any project from concept to deployment.
           </p>
@@ -119,7 +119,7 @@ export default function Skills() {
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
                   {skill.category}
                 </h3>
-                <p className="text-sm text-purple-600 dark:text-purple-400 mb-6 font-medium">
+                <p className="text-sm text-emerald-600 dark:text-emerald-400 mb-6 font-medium">
                   Led by {skill.specialist}
                 </p>
                 <div className="space-y-4">
@@ -152,3 +152,4 @@ export default function Skills() {
     </section>
   );
 }
+
