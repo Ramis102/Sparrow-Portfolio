@@ -10,14 +10,14 @@ const teamMembers = [
   {
     id: 1,
     name: 'Muhammad Rohaan Khurram',
-    role: 'Mobile & Game Developer',
+    role: 'Mobile Developer & Data Scientist',
     avatar: '/pics/Rohaan.jpeg',
     gradient: 'from-emerald-500 to-green-500',
     skills: ['React Native', 'Unity', 'Python', 'C++', 'Django'],
     github: 'https://github.com/RohaanAwan99',
     linkedin: 'https://www.linkedin.com/in/rohaan-khurram-4bb498275/',
 
-    bio: 'Game development champion with expertise in mobile apps and competitive programming. Won multiple hackathons including M-Labs Game Jam.',
+    bio: 'Mobile developer and data scientist with a passion for creating engaging mobile experiences and analyzing complex datasets to drive insights.',
     phone: '0333 8762669',
     specialization: 'Mobile & Gaming'
   },
@@ -38,40 +38,40 @@ const teamMembers = [
   {
     id: 3,
     name: 'Ramis Humayun',
-    role: 'Project Manager & Developer',
+    role: 'ML & LLM Specialist',
     avatar: '/pics/Ramis.jpeg',
     gradient: 'from-blue-500 to-cyan-500',
     skills: ['Project Management', 'React', 'Node.js', 'Leadership', 'Agile'],
     github: 'https://github.com/Ramis102',
     linkedin: 'http://www.linkedin.com/in/ramis-humayun-66794626b',
 
-    bio: 'Team leader and project orchestrator ensuring efficient workflow and successful project delivery through strategic planning.',
-    specialization: 'Leadership & Management'
+    bio: 'ML enthusiast and specialist in large language models and AI solutions. Passionate about leveraging AI to solve real-world problems.',
+    specialization: 'ML & LLM'
   },
   {
     id: 4,
     name: 'Taha Mudassar',
-    role: 'Frontend Developer',
+    role: 'Game Developer & DevOps Expert',
     avatar: '/pics/Taha.jpeg',
     gradient: 'from-orange-500 to-red-500',
     skills: ['React', 'JavaScript', 'CSS', 'UI/UX', 'HTML'],
     github: 'https://github.com/tahamudassar',
     linkedin: 'https://www.linkedin.com/in/taha-mudassar',
 
-    bio: 'Frontend specialist creating beautiful and responsive interfaces with attention to detail and user-centered design principles.',
-    specialization: 'Frontend & Design'
+    bio: 'Game developer specializing in creating immersive experiences and optimizing game performance through effective DevOps practices.',
+    specialization: 'Game Development & DevOps'
   },
   {
     id: 5,
     name: 'Abu Bakar',
-    role: 'Backend Developer & Analyst',
+    role: 'Full-Stack Developer & Backend Specialist',
     avatar: '/pics/Abubakar.jpeg',
     gradient: 'from-indigo-500 to-emerald-500',
     skills: ['Python', 'Data Analysis', 'Backend', 'Testing', 'Algorithms'],
     github: 'https://github.com/abu-bakar',
     linkedin: 'https://linkedin.com/in/abu-bakar',
 
-    bio: 'Backend developer and data analyst ensuring robust system architecture and data-driven decision making for optimal performance.',
+    bio: 'Versatile full-stack developer with a strong foundation in backend systems and data analytics, dedicated to building robust and scalable applications.',
     specialization: 'Backend & Analytics'
   }
 ];
