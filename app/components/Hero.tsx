@@ -1,54 +1,65 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Sparkles, Star } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-      {/* Enhanced Animated Background Elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950">
+      {/* Sophisticated Background with Interactive Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Main floating orbs */}
+        {/* Dynamic Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+        
+        {/* Interactive Mouse Glow */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/40 rounded-full blur-3xl"
+          className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl pointer-events-none"
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.4, 0.7, 0.4],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
+            x: mousePosition.x - 192,
+            y: mousePosition.y - 192,
+          }}
+          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+        />
+
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-1/4 left-1/6 w-32 h-32"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
+            opacity: [0.4, 0.8, 0.4],
           }}
           transition={{
-            duration: 12,
+            duration: 20,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
-        />
+        >
+          <div className="w-full h-full bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rotate-45 blur-sm" />
+        </motion.div>
+
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-500/40 rounded-full blur-3xl"
+          className="absolute bottom-1/3 right-1/6 w-24 h-24"
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.7, 0.4],
-            x: [0, -40, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-        <motion.div
-          className="absolute top-1/3 right-1/3 w-64 h-64 bg-pink-500/30 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.3, 0.6, 0.3],
-            rotate: [0, 180, 360],
+            rotate: [360, 0],
+            scale: [1, 0.8, 1],
+            y: [0, -20, 0],
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
         />
         
@@ -79,96 +90,140 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-green-900/20" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            We Are{' '}
-            <span className="bg-linear-to-r from-emerald-400 to-green-600 text-transparent bg-clip-text">
-              Team Sparrow
-            </span>
-          </motion.h1>
-
-          <motion.p
-            className="text-xl md:text-2xl lg:text-3xl text-slate-300 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Five Creative Minds, One Vision
-            <br />
-            <span className="text-lg md:text-xl text-slate-400">
-              Collaborating to build exceptional digital experiences
-            </span>
-          </motion.p>
-
+      {/* Elegant Content Section */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          {/* Badge */}
           <motion.div
-            className="flex gap-4 justify-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8"
           >
-            <a
-              href="#about"
-              className="px-8 py-4 bg-linear-to-r from-emerald-600 to-green-600 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105"
-            >
-              Meet The Team
-            </a>
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            >
-              View Our Work
-            </a>
+            <Sparkles className="w-4 h-4 text-yellow-400" />
+            <span className="text-sm font-medium text-white">Award-Winning Development Team</span>
           </motion.div>
 
+          {/* Main Title with Typewriter Effect */}
+          <motion.div className="mb-8">
+            <motion.h1
+              className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-tight"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                OUR
+              </motion.span>
+              <motion.span
+                className="block bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                TEAM
+              </motion.span>
+            </motion.h1>
+          </motion.div>
+
+          {/* Elegant Subtitle */}
           <motion.div
-            className="flex gap-6 justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            className="mb-12"
           >
-            <a
-              href="https://github.com/Ramis102"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-300 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+            <p className="text-2xl md:text-3xl font-light text-gray-300 mb-4 leading-relaxed">
+              Crafting Digital Excellence Through
+            </p>
+            <motion.p
+              className="text-xl md:text-2xl text-gray-400 font-light max-w-4xl mx-auto leading-relaxed"
+              animate={{ 
+                backgroundPosition: ['0%', '100%'],
+              }}
+              transition={{ 
+                duration: 3,
+                repeat: Infinity,
+                repeatType: 'reverse'
+              }}
+              style={{
+                backgroundImage: 'linear-gradient(45deg, #60a5fa, #a78bfa, #34d399, #fbbf24)',
+                backgroundSize: '300% 300%',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
             >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com/in/rohaan-khurram"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-300 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:rohaankhurram99@gmail.com"
-              className="text-slate-300 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Mail size={24} />
-            </a>
+              Innovation • Collaboration • Precision
+            </motion.p>
           </motion.div>
-        </motion.div>
 
-        {/* Scroll Indicator */}
+          {/* Elegant CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+          >
+            <motion.a
+              href="#about"
+              className="group relative px-12 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 text-white font-semibold rounded-2xl overflow-hidden shadow-2xl"
+              whileHover={{ scale: 1.05, rotateX: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10 flex items-center gap-2">
+                Meet Our Team
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.div>
+              </span>
+            </motion.a>
+            
+            <motion.a
+              href="#projects"
+              className="group px-12 py-4 bg-white/5 backdrop-blur-xl border border-white/20 text-white font-semibold rounded-2xl hover:bg-white/10 transition-all duration-300"
+              whileHover={{ scale: 1.05, rotateX: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="flex items-center gap-2">
+                View Portfolio
+                <Sparkles className="w-4 h-4" />
+              </span>
+            </motion.a>
+          </motion.div>
+
+
+        </div>
+
+        {/* Elegant Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          whileHover={{ scale: 1.2 }}
         >
-          <ArrowDown className="text-white/50" size={32} />
+          <div className="flex flex-col items-center gap-2">
+            <motion.div
+              className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+              whileHover={{ borderColor: 'rgba(255,255,255,0.6)' }}
+            >
+              <motion.div
+                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              />
+            </motion.div>
+            <span className="text-xs text-white/50 font-light tracking-wider">SCROLL</span>
+          </div>
         </motion.div>
       </div>
     </section>

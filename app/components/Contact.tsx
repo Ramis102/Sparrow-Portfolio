@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
   const ref = useRef(null);
@@ -21,14 +21,27 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setSubmitStatus('success');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    setTimeout(() => setSubmitStatus('idle'), 5000);
+    try {
+      // Create mailto URL with form data
+      const emailSubject = encodeURIComponent(formData.subject);
+      const emailBody = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoUrl = `mailto:tcs165199@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      
+      // Open default email client
+      window.location.href = mailtoUrl;
+      
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -52,7 +65,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-linear-to-r from-emerald-600 to-green-600 mx-auto rounded-full mb-6" />
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Ready to bring your next project to life? Team Sparrow is here to help. 
+            Ready to bring your next project to life? Our team is here to help. 
             Let's collaborate and create something amazing together.
           </p>
         </motion.div>
@@ -65,11 +78,11 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
-              Connect With Team Sparrow
+              Connect With Our Team
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-8">
               We're always excited to take on new challenges and collaborate on innovative projects. 
-              Whether you need full-stack development, mobile apps, AI solutions, or creative design, 
+              Whether you need full-stack development, mobile apps, game development, or creative solutions, 
               our diverse team has the expertise to bring your vision to life.
             </p>
 
@@ -85,32 +98,15 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email</h4>
                   <a
-                    href="mailto:hello@teamsparrow.com"
+                    href="mailto:tcs165199@gmail.com"
                     className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
                   >
-                    hello@teamsparrow.com
+                    tcs165199@gmail.com
                   </a>
                 </div>
               </motion.div>
 
-              <motion.div
-                className="flex items-start gap-4"
-                whileHover={{ x: 10 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="bg-linear-to-br from-blue-600 to-cyan-600 p-3 rounded-xl">
-                  <Phone className="text-white" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
-                  <a
-                    href="tel:+1555SPARROW"
-                    className="text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition-colors"
-                  >
-                    +1 (555) SPARROW
-                  </a>
-                </div>
-              </motion.div>
+
 
               <motion.div
                 className="flex items-start gap-4"
@@ -227,7 +223,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 text-green-700 dark:text-green-300 rounded-xl text-center"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Email client opened! Please send the email to complete your message.
                 </motion.div>
               )}
 
